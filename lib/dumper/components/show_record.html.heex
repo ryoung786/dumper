@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
 <div class="mb-3">
   <div class="d-flex justify-content-between align-items-end">
     <div class="d-flex align-items-baseline pt-3">
-      <h5 class="mb-0"><%= module_name(@module) %></h5>
+      <h5 class="mb-0">{module_name(@module)}</h5>
       <span class="ml-3">
         <.link navigate={"#{@dumper_home}?module=#{@module}"}>See all</.link>
       </span>
@@ -26,7 +26,7 @@ governing permissions and limitations under the License.
         class="btn btn-link"
         style={if i > 0, do: "border-left: 1px solid #6c757d"}
       >
-        <%= text %>
+        {text}
       </a>
     </div>
   </div>
@@ -39,7 +39,7 @@ governing permissions and limitations under the License.
     <div class="dash-table-wrapper">
       <table class="table table-sm table-hover table-bordered mt-0 dash-table">
         <tr :for={field <- fields(@module, @config_module)}>
-          <td scope="row" style="background-color: #f2f4f9;"><strong><%= field %></strong></td>
+          <td scope="row" style="background-color: #f2f4f9;"><strong>{field}</strong></td>
           <td data-field={field}>
             <.value
               module={@module}
@@ -65,7 +65,7 @@ governing permissions and limitations under the License.
 >
   <details open class="mb-3">
     <summary>
-      <span><%= humanize_association_name(assoc) %></span>
+      <span>{humanize_association_name(assoc)}</span>
     </summary>
     <div class="d-flex flex-column mt-2" style="gap: 0.5rem">
       <.table_records
@@ -86,7 +86,7 @@ governing permissions and limitations under the License.
 >
   <details open class="mb-3">
     <summary>
-      <span><%= humanize_association_name(assoc) %></span>
+      <span>{humanize_association_name(assoc)}</span>
     </summary>
     <div class="d-flex flex-column mt-2" style="gap: 0.5rem">
       <.table_records records={records} config_module={@config_module} dumper_home={@dumper_home} />

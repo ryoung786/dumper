@@ -9,6 +9,10 @@
 
 * Instead of returning a `404` when the search by ID input is used with an unknown ID value, the liveview process crashes with a `Ecto.NoResultsError`.  Switching from `push_patch` to `push_navigate` in the search by id event handler resolves this issue.
 
+### Heex syntax
+
+* `mix format` updated heex usage to `{..}` where possible.
+
 
 ## v0.2.7
 
