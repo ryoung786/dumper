@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.3.0
+### Moving Repositories
+
+* The project has moved from [https://github.com/adobe/elixir-dumper](adobe/elixir-dumper) to [https://github.com/ryoung786/dumper](ryoung786/dumper).  I left Adobe earlier this year and no longer have write access to their github repositories.  In order to continue making improvements, adding features, and fixing bugs, the project has been forked and active development will now be at [https://github.com/ryoung786/dumper](github.com/ryoung786/dumper).  The hex package remains the same ([https://hex.pm/packages/dumper](dumper)).  A `NOTICE` file has been added to the repository to address licensing concerns.
+
+### Bug Fix
+
+* Instead of returning a `404` when the search by ID input is used with an unknown ID value, the liveview process crashes with a `Ecto.NoResultsError`.  Switching from `push_patch` to `push_navigate` in the search by id event handler resolves this issue.
+
+
 ## v0.2.7
 
 ### Improvements
