@@ -35,7 +35,7 @@ defmodule Dumper do
     ~H"""
     <details :if={@doctext != ""} class="markdown mt-2">
       <summary class="cursor-pointer">Documentation</summary>
-      <div class="card bg-light mt-1 p-3 small"><%= @markdown %></div>
+      <div class="card bg-light mt-1 p-3 small">{@markdown}</div>
     </details>
     """
   end
@@ -65,7 +65,7 @@ defmodule Dumper do
       Map.has_key?(excluded, module) ->
         Enum.reduce(excluded[module], all, fn f, acc -> List.delete(acc, f) end)
 
-      :all_fields ->
+      true ->
         all
     end
   end

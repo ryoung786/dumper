@@ -11,8 +11,8 @@
 defmodule Dumper.MixProject do
   use Mix.Project
 
-  @version "0.2.7"
-  @url "https://github.com/adobe/elixir-dumper"
+  @version "0.3.0"
+  @url "https://github.com/ryoung786/dumper"
 
   def project do
     [
@@ -56,6 +56,7 @@ defmodule Dumper.MixProject do
       {:ecto_sql, "~> 3.5", only: [:dev, :test]},
       {:ecto_sqlite3, "~> 0.7", only: :test},
       {:floki, "~> 0.36.0", only: :test},
+      {:lazy_html, ">= 0.1.0", only: :test},
       {:faker, "~> 0.17", only: :test},
       {:styler, "~> 1.1", only: [:dev, :test], runtime: false}
     ]

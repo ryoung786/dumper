@@ -1,6 +1,6 @@
 [![Hex.pm](https://img.shields.io/hexpm/v/dumper)](https://hex.pm/packages/dumper)
 [![Hexdocs.pm](https://img.shields.io/badge/docs-hexdocs.pm-purple)](https://hexdocs.pm/dumper)
-[![Github.com](https://github.com/adobe/elixir-dumper/actions/workflows/ci.yml/badge.svg)](https://github.com/adobe/elixir-dumper/actions)
+[![Github.com](https://github.com/ryoung786/dumper/actions/workflows/ci.yml/badge.svg)](https://github.com/ryoung786/dumper/actions)
 
 # Dumper
 
@@ -30,7 +30,7 @@ Add `dumper` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:dumper, "~> 0.2.6"}
+    {:dumper, "~> 0.3.0"}
   ]
 end
 ```

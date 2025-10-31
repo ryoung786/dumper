@@ -30,7 +30,7 @@ governing permissions and limitations under the License.
         <thead class="">
           <tr>
             <th :for={field <- fields} :if={field not in embeds} class="">
-              <%= field %>
+              {field}
             </th>
           </tr>
         </thead>
@@ -39,7 +39,7 @@ governing permissions and limitations under the License.
             <td :for={field <- fields} :if={field not in embeds} data-field={field}>
               <%= if field == :id do %>
                 <.link navigate={"#{@dumper_home}?module=#{module}&id=#{record.id}"}>
-                  <%= record.id %>
+                  {record.id}
                 </.link>
               <% else %>
                 <.value

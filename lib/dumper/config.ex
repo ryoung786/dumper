@@ -336,7 +336,7 @@ defmodule Dumper.Config do
 
   defp default_style_value(%{id_link_schema: schema} = assigns) when not is_nil(schema) do
     ~H|<.link navigate={"#{@dumper_home}?module=#{@id_link_schema}&id=#{@value}"}>
-  <%= @value %>
+  {@value}
 </.link>|
   end
 
@@ -345,13 +345,13 @@ defmodule Dumper.Config do
   defp default_style_value(%{value: true} = assigns), do: ~H|<span class="badge badge-success">true</span>|
   defp default_style_value(%{value: false} = assigns), do: ~H|<span class="badge badge-danger">false</span>|
   defp default_style_value(%{type: :binary_id} = assigns), do: ~H|<pre class="mb-0"><%= @value %></pre>|
-  defp default_style_value(%{type: :date} = assigns), do: ~H/<%= @value |> Calendar.strftime("%b %d, %Y") %>/
+  defp default_style_value(%{type: :date} = assigns), do: ~H/{@value |> Calendar.strftime("%b %d, %Y")}/
 
   defp default_style_value(%{type: type} = assigns)
        when type in ~w/utc_datetime_usec naive_datetime_usec utc_datetime naive_datetime/a do
     ~H"""
-    <span><%= Calendar.strftime(@value, "%b %d, %Y") %></span>
-    &nbsp; <span><%= Calendar.strftime(@value, "%I:%M:%S.%f %p") %></span>
+    <span>{Calendar.strftime(@value, "%b %d, %Y")}</span>
+    &nbsp; <span>{Calendar.strftime(@value, "%I:%M:%S.%f %p")}</span>
     """
   end
 

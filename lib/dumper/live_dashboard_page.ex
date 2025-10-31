@@ -140,7 +140,7 @@ defmodule Dumper.LiveDashboardPage do
 
   def handle_event("id-search", %{"search" => search}, socket) do
     to = record_path(socket.assigns.module, search, socket)
-    {:noreply, push_patch(socket, to: to)}
+    {:noreply, push_navigate(socket, to: to)}
   end
 
   defp to_module(nil), do: nil
