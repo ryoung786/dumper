@@ -27,7 +27,7 @@ defmodule Dumper do
 
     markdown_html =
       doctext
-      |> Earmark.as_html!(code_class_prefix: "lang- language-")
+      |> MDEx.to_html!(syntax_highlight: nil)
       |> Phoenix.HTML.raw()
 
     assigns = assign(assigns, markdown: markdown_html, doctext: doctext)

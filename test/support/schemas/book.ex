@@ -12,7 +12,7 @@ defmodule Book do
   @moduledoc """
   Representation of a Book for demo purposes.
 
-  Markdown is rendered in earmark.
+  Markdown is rendered in MDEx.
     * ~strike text~
     * **bold text**
   """
