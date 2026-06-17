@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.3.1
+Replaces `earmark` with `mdex`
+
 ## v0.3.0
 ### Moving Repositories
 
