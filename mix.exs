@@ -46,7 +46,7 @@ defmodule Dumper.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:earmark, ">= 1.4.0"},
+      {:mdex, "~> 0.12"},
       {:ecto, ">= 3.7.0"},
       {:phoenix_ecto, ">= 4.4.0"},
       {:phoenix_live_dashboard, ">= 0.8.3"},
